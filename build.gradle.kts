@@ -37,6 +37,7 @@ dependencies {
 
     // Message utils
     implementation("net.kyori:adventure-api:4.9.3")
+    implementation("com.github.DevBlokJochem:PlaceholderAPI:3a69fffdbd")
 
     //json config things
     implementation("com.google.code.gson:gson:2.8.6")
