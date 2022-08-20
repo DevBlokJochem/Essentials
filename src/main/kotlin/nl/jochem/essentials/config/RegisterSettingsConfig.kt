@@ -12,7 +12,7 @@ object RegisterSettingsConfig {
             File(fileName).createNewFile()
             File(fileName).writeText(
                 GsonBuilder().setPrettyPrinting().create().toJson(Settings(
-                    true, true))
+                    true, true, true))
             )
         }
     }
@@ -39,4 +39,5 @@ var settingsConfig = GsonBuilder()
 data class Settings(
     val gamemode: Boolean,
     val invsee: Boolean,
+    val clear: Boolean,
 )

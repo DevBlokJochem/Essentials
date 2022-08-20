@@ -18,7 +18,9 @@ object RegisterMessagesConfig {
                     "&cSorry, but you gave me an invalid value.",
                     "&7Your gamemode has been changed to %player_gamemode%.",
                     "&7You have changed the gamemode.",
-                "&cYour target has lost connection."))
+                "&cYour target has lost connection.",
+                "&7You have cleared your inventory.",
+                "&7You have cleared his inventory."))
             )
         }
     }
@@ -42,4 +44,6 @@ data class Messages(
     val gamemode_self : String,
     val gamemode_other : String,
     val invsee_target_disconnect : String,
+    val clear_self : String,
+    val clear_other : String,
 )
