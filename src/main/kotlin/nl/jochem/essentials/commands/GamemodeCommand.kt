@@ -10,14 +10,12 @@ import net.minestom.server.command.builder.suggestion.SuggestionEntry
 import net.minestom.server.entity.GameMode
 import net.minestom.server.entity.Player
 import net.minestom.server.utils.entity.EntityFinder
-import nl.jochem.essentials.config.MessagesConfig
+import nl.jochem.essentials.config.messagesConfig
 import nl.jochem.essentials.utils.msg
 class GamemodeCommand : Command("gamemode", "gm") {
     private fun usage(sender: CommandSender, context: CommandContext) {
         sender.msg("§cUsage: /gamemode <gamemode> [player]")
     }
-
-    private val messagesConfig = MessagesConfig().getConfig()
 
     private fun executeOnSelf(
         sender: CommandSender,

@@ -12,7 +12,7 @@ object RegisterSettingsConfig {
             File(fileName).createNewFile()
             File(fileName).writeText(
                 GsonBuilder().setPrettyPrinting().create().toJson(Settings(
-                    true, true, true, true, true))
+                    true, true, true, true, true, true))
             )
         }
     }
@@ -32,6 +32,10 @@ fun Settings.update() {
     RegisterSettingsConfig.reloadConfig()
 }
 
+fun Settings.getFilename() : String {
+    return fileName
+}
+
 var settingsConfig = GsonBuilder()
     .setPrettyPrinting()
     .create()!!.fromJson(File(fileName).readText(), Settings::class.java)!!
@@ -42,4 +46,5 @@ data class Settings(
     val clear: Boolean,
     val fly: Boolean,
     val vanish: Boolean,
+    val reload: Boolean,
 )

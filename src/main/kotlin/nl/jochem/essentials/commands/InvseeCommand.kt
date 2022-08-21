@@ -7,7 +7,7 @@ import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.command.builder.exception.ArgumentSyntaxException
 import net.minestom.server.entity.Player
 import net.minestom.server.utils.entity.EntityFinder
-import nl.jochem.essentials.config.MessagesConfig
+import nl.jochem.essentials.config.messagesConfig
 import nl.jochem.essentials.mechanics.InvseeHandler
 import nl.jochem.essentials.utils.msg
 
@@ -15,8 +15,6 @@ class InvseeCommand : Command("invsee") {
     private fun usage(sender: CommandSender, context: CommandContext) {
         sender.msg("§cUsage: /invsee [player]")
     }
-
-    private val messagesConfig = MessagesConfig().getConfig()
 
     private fun executeOnPlayer(
         sender: CommandSender,

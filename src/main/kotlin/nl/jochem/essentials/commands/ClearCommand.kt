@@ -7,7 +7,7 @@ import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.command.builder.exception.ArgumentSyntaxException
 import net.minestom.server.entity.Player
 import net.minestom.server.utils.entity.EntityFinder
-import nl.jochem.essentials.config.MessagesConfig
+import nl.jochem.essentials.config.messagesConfig
 import nl.jochem.essentials.utils.clearInv
 import nl.jochem.essentials.utils.msg
 
@@ -15,8 +15,6 @@ class ClearCommand : Command("clear") {
     private fun usage(sender: CommandSender, context: CommandContext) {
         sender.msg("§cUsage: /clear [player]")
     }
-
-    private val messagesConfig = MessagesConfig().getConfig()
 
     private fun executeOnSelf(
         sender: CommandSender

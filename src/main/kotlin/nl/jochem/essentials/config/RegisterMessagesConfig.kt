@@ -24,22 +24,21 @@ object RegisterMessagesConfig {
                 "&7You can now fly.",
                 "&7You can no longer fly.",
                 "&7He can now fly.",
-                "&7He can no longer fly."))
+                "&7He can no longer fly.",
+                "&7You are now &c&lreloading&7 the configs."))
             )
         }
     }
 
 }
 
-class MessagesConfig() {
-
-    fun getConfig(): Messages {
-        return GsonBuilder()
-            .setPrettyPrinting()
-            .create()!!.fromJson(File(fileName).readText(), Messages::class.java)!!
-    }
-
+fun Messages.getFilename() : String {
+    return fileName
 }
+
+var messagesConfig = GsonBuilder()
+    .setPrettyPrinting()
+    .create()!!.fromJson(File(fileName).readText(), Messages::class.java)!!
 
 data class Messages(
     val only_player : String,
@@ -54,4 +53,5 @@ data class Messages(
     val fly_self_off: String,
     val fly_other_on: String,
     val fly_other_off: String,
+    val reload: String,
 )

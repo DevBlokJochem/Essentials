@@ -4,7 +4,7 @@ import net.minestom.server.command.CommandSender
 import net.minestom.server.command.builder.Command
 import net.minestom.server.command.builder.CommandContext
 import net.minestom.server.entity.Player
-import nl.jochem.essentials.config.MessagesConfig
+import nl.jochem.essentials.config.messagesConfig
 import nl.jochem.essentials.mechanics.VanishManager
 import nl.jochem.essentials.utils.isVanish
 import nl.jochem.essentials.utils.msg
@@ -14,8 +14,6 @@ class VanishCommand : Command("vanish", "v") {
     private fun usage(sender: CommandSender, context: CommandContext) {
         sender.msg("§cUsage: /vanish")
     }
-
-    private val messagesConfig = MessagesConfig().getConfig()
 
     private fun executeOnSelf(
         sender: CommandSender
