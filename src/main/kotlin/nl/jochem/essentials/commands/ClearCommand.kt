@@ -21,7 +21,7 @@ class ClearCommand : Command("clear") {
     private fun executeOnSelf(
         sender: CommandSender
     ) {
-        if (!sender.isPlayer) {
+        if (sender !is Player) {
             sender.sendMessage(messagesConfig.only_player)
             return
         }

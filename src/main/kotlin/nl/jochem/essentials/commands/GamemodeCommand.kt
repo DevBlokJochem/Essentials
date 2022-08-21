@@ -24,11 +24,10 @@ class GamemodeCommand : Command("gamemode", "gm") {
         context: CommandContext,
         gameMode: ArgumentString,
     ) {
-        if (!sender.isPlayer) {
+        if (sender !is Player) {
             sender.sendMessage(messagesConfig.only_player)
             return
         }
-        val player = sender as Player
         if(!sender.hasPermission("essentials.gamemode.self")) {
             return sender.msg(messagesConfig.no_permission)
         }
@@ -37,7 +36,7 @@ class GamemodeCommand : Command("gamemode", "gm") {
             sender.msg(messagesConfig.invalid_value)
             return
         }
-        player.gameMode = gamemode
+        sender.gameMode = gamemode
 
         sender.msg(messagesConfig.gamemode_self)
     }

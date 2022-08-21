@@ -20,7 +20,11 @@ object RegisterMessagesConfig {
                     "&7You have changed the gamemode.",
                 "&cYour target has lost connection.",
                 "&7You have cleared your inventory.",
-                "&7You have cleared his inventory."))
+                "&7You have cleared his inventory.",
+                "&7You can now fly.",
+                "&7You can no longer fly.",
+                "&7He can now fly.",
+                "&7He can no longer fly."))
             )
         }
     }
@@ -46,4 +50,8 @@ data class Messages(
     val invsee_target_disconnect : String,
     val clear_self : String,
     val clear_other : String,
+    val fly_self_on: String,
+    val fly_self_off: String,
+    val fly_other_on: String,
+    val fly_other_off: String,
 )

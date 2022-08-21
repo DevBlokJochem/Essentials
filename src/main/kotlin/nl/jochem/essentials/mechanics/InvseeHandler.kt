@@ -19,7 +19,7 @@ class InvseeHandler(player: Player, target: Player) {
     private val player : Player
     private val target : Player
     private val inventory = Inventory(InventoryType.CHEST_5_ROW, "§6§lInventory ${target.username}")
-    private val playerHandler = EventNode.value("invsee-player-${player.uuid}", EventFilter.PLAYER) { obj : Player -> obj == player || obj == target }
+    private val playerHandler = EventNode.event("invsee-player-${player.uuid}", EventFilter.PLAYER) { obj -> obj.player == player || obj.player == target }
     private val inventoryHandler = EventNode.event("invsee-inv-${player.uuid}", EventFilter.INVENTORY) { obj -> obj.inventory == null || obj.inventory == inventory}
     private val handler = MinecraftServer.getGlobalEventHandler()
     private val messagesConfig = MessagesConfig().getConfig()

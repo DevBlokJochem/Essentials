@@ -8,3 +8,6 @@
 - essentials.invsee.edit
 - essentials.clear.self
 - essentials.clear.other
+- essentials.fly.self
+- essentials.fly.other
+- essentials.vanish

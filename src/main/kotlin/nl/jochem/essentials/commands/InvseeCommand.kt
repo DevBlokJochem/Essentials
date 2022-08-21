@@ -22,7 +22,7 @@ class InvseeCommand : Command("invsee") {
         sender: CommandSender,
         context: CommandContext,
     ) {
-        if (!sender.isPlayer) {
+        if (sender !is Player) {
             sender.sendMessage(messagesConfig.only_player)
             return
         }
