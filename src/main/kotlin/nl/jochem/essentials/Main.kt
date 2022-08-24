@@ -29,6 +29,7 @@ class Main : Extension() {
         if(settingsConfig.fly) commandManager.register(FlyCommand())
         if(settingsConfig.vanish) commandManager.register(VanishCommand())
         if(settingsConfig.reload) commandManager.register(ReloadCommand())
+        if(settingsConfig.msg) commandManager.register(MSGCommand())
     }
 
     private fun registerConfigs() {

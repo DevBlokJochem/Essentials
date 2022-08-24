@@ -11,7 +11,7 @@ import net.minestom.server.event.player.PlayerDisconnectEvent
 import net.minestom.server.inventory.Inventory
 import net.minestom.server.inventory.InventoryType
 import net.minestom.server.inventory.PlayerInventory
-import nl.jochem.essentials.config.MessagesConfig
+import nl.jochem.essentials.config.messagesConfig
 import nl.jochem.essentials.utils.msg
 
 class InvseeHandler(player: Player, target: Player) {
@@ -22,7 +22,6 @@ class InvseeHandler(player: Player, target: Player) {
     private val playerHandler = EventNode.event("invsee-player-${player.uuid}", EventFilter.PLAYER) { obj -> obj.player == player || obj.player == target }
     private val inventoryHandler = EventNode.event("invsee-inv-${player.uuid}", EventFilter.INVENTORY) { obj -> obj.inventory == null || obj.inventory == inventory}
     private val handler = MinecraftServer.getGlobalEventHandler()
-    private val messagesConfig = MessagesConfig().getConfig()
 
     init {
         this.player = player

@@ -12,3 +12,4 @@
 - essentials.fly.other
 - essentials.vanish
 - essentials.reload
+- essentials.msg

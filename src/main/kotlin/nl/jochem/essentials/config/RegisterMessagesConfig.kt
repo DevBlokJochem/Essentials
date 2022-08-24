@@ -25,7 +25,8 @@ object RegisterMessagesConfig {
                 "&7You can no longer fly.",
                 "&7He can now fly.",
                 "&7He can no longer fly.",
-                "&7You are now &c&lreloading&7 the configs."))
+                "&7You are now &c&lreloading&7 the configs.",
+                "&cSorry, but you cannot reply to a player."))
             )
         }
     }
@@ -54,4 +55,5 @@ data class Messages(
     val fly_other_on: String,
     val fly_other_off: String,
     val reload: String,
+    val msg_no_reply: String,
 )

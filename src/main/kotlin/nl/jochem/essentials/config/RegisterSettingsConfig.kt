@@ -12,7 +12,7 @@ object RegisterSettingsConfig {
             File(fileName).createNewFile()
             File(fileName).writeText(
                 GsonBuilder().setPrettyPrinting().create().toJson(Settings(
-                    true, true, true, true, true, true))
+                    true, true, true, true, true, true, true))
             )
         }
     }
@@ -47,4 +47,5 @@ data class Settings(
     val fly: Boolean,
     val vanish: Boolean,
     val reload: Boolean,
+    val msg: Boolean,
 )

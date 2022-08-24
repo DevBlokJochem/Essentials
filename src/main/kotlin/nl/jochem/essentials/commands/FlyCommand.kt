@@ -21,7 +21,7 @@ class FlyCommand : Command("fly") {
             sender.msg(messagesConfig.only_player)
             return
         }
-        if(sender.hasPermission("essentials.fly.self")) {
+        if(!sender.hasPermission("essentials.fly.self")) {
             sender.msg(messagesConfig.no_permission)
             return
         }
